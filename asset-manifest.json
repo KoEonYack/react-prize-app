@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-prize-app/static/css/main.5f361e03.chunk.css",
+    "main.js": "/react-prize-app/static/js/main.aa137667.chunk.js",
+    "main.js.map": "/react-prize-app/static/js/main.aa137667.chunk.js.map",
+    "runtime-main.js": "/react-prize-app/static/js/runtime-main.2d99a3c7.js",
+    "runtime-main.js.map": "/react-prize-app/static/js/runtime-main.2d99a3c7.js.map",
+    "static/js/2.3db81ecb.chunk.js": "/react-prize-app/static/js/2.3db81ecb.chunk.js",
+    "static/js/2.3db81ecb.chunk.js.map": "/react-prize-app/static/js/2.3db81ecb.chunk.js.map",
+    "index.html": "/react-prize-app/index.html",
+    "precache-manifest.2567f7adaf8193a2df495266f759acb0.js": "/react-prize-app/precache-manifest.2567f7adaf8193a2df495266f759acb0.js",
+    "service-worker.js": "/react-prize-app/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/react-prize-app/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.3db81ecb.chunk.js.LICENSE.txt": "/react-prize-app/static/js/2.3db81ecb.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/react-prize-app/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d99a3c7.js",
+    "static/js/2.3db81ecb.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.aa137667.chunk.js"
+  ]
+}
