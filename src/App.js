@@ -1,25 +1,75 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useRef } from 'react';
+import Fullpage, { FullPageSections, FullpageSection } from '@ap.cx/react-fullpage'
+import ReactPlayer from "react-player";
+
 import './App.css';
 
 function App() {
+  const [videoStart, setVideoStart] = useState(false);
+  const videoRef = useRef({});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fullpage>
+      <FullPageSections>
+
+        <FullpageSection style={{
+          // height: '55vh',
+        }}>
+        <ReactPlayer
+          // url="https://www.youtube.com/watch?v=AWKzr6n0ea0"
+          url="https://vimeo.com/421408803"
+          // url="./static/winning.flv"
+          playing={true}
+          loop={true}
+          controls={false}
+          muted={true}
+          width="100%"
+          height="55vw"
+          onReady={() => console.log("video ready")}
+          onStart={() => {
+            console.log("video start");
+            setTimeout(() => {
+              setVideoStart(true);
+            }, 2000);
+          }}
+          onPlay={() => {
+            console.log("video play");
+            setTimeout(() => {
+              setVideoStart(true);
+            }, 2000);
+          }}
+          onError={() => console.log("video error")}
+          ref={videoRef}
+          style={{
+            transition: "0.3s ease-in-out",
+            overflow: "hidden",
+            position: "absolute",
+            zIndex: -1,
+            filter: `blur(2px) brightness(${videoStart ? 0.8 : 0})`
+          }}
+        />
+
+
+        </FullpageSection>
+
+        <FullpageSection style={{
+          backgroundColor: 'coral',
+          padding: '1em',
+        }}>
+          2
+        </FullpageSection>
+        
+        
+        <FullpageSection 
+          style={{
+          backgroundColor: 'firebrick',
+          padding: '1em',
+        }}>
+          3
+        </FullpageSection>
+
+      </FullPageSections>
+  </Fullpage>
   );
 }
 
